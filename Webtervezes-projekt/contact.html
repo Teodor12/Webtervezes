@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/logo-icon.jpg">
+    <title>Kapcsolat</title>
+</head>
+
+<body>
+
+    <header>
+        <h1 class="center">Kapcsolat</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Kezdőlap</a></li>
+            <li><a href="cars.html">Autóink</a></li>
+            <li><a href="history.html">Történelem</a></li>
+            <li class="active"><a href="contact.html">Kapcsolat</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2 class="center">Kapcsolatfelvétel</h2>
+        <div id="formContainer">
+            <form action="test.html" method="POST" autocomplete="off" enctype="multipart/form-data">
+                <fieldset>
+
+                <legend>Személyes adatok</legend>
+                <label for="surName">Vezetéknév</label>
+                <input type="text" name="surname" id="surName">
+
+                <label for="name">Név</label>
+                <input type="text" name="name" id="name">
+
+                <label for="phoneNum">Telefonszám</label>
+                <input type="tel" name="phone" id="phoneNum">
+
+                <label for="email">E-mail</label>
+                <input type="email" name="emailAdress" id="email">
+                </fieldset>
+                
+
+                <label for="caseType">Milyen ügyben érdeklődik?</label>
+                <select name="caseSelect" id="caseType">
+                    <option selected value="buyCar">Autót szeretnék vásárolni.</option>
+                    <option value="sellCar">Škoda márkájú autómat szeretném eladni.</option>
+                    <option value="service">Szervíz</option>
+                    <option value="interested">Érdeklődöm a szolgáltatásaik iránt.</option>
+                    <option value="testDrive">Tesztvezetés</option>
+                </select>
+                <div class="checkboxContainer">
+                    <label>
+                        <input type="checkbox" name="checkbox1" value="dataConfirm" required>
+                        Nyilatkozom, hogy a megadott adatok a valóságnak megfelelnek.
+                    </label>
+                    <label>
+                        <input type="checkbox" name="checkbox2" value="newsLetterConfirm" checked>
+                        Felíratkozom az oldal hírlevelére.
+                    </label>
+                </div>
+
+                
+                <input type="submit" name="sendButton" value="Küldés">
+                <input type="reset" name="resetButton" value="Törlés">
+
+            </form>
+        </div>
+
+    </main>
+
+    <footer>
+        <p class="center">6723, Szeged Sárosi út 2/b</p>
+        <p class="center">Simply clever</p>
+    </footer>
+
+</body>
+
+</html>

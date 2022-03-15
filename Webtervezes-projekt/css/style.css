@@ -1,0 +1,355 @@
+
+
+body{
+    background-image: url("../images/gray-bg.jfif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.center {
+    margin: 0 auto;                            
+    text-align: center;
+                           
+}
+
+header{
+    padding: 75px;
+    background-image: url("../images/main.png"); 
+    background-repeat: no-repeat;               
+    background-size: cover;                     
+    background-position: center;
+}
+
+header h1{
+    text-shadow: 7px 7px black; 
+    text-transform: uppercase;
+    font-size: 42px;
+    color: white;
+    animation: mover 6s;
+}
+
+hr{
+    width: 60%;
+}
+
+
+
+/*MENU*/
+nav {
+    background-color: black;
+    overflow: hidden;
+    top: 0;
+    width: 100%;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+}
+
+nav li:hover:not(.active) {
+    background-color: black;
+}
+
+nav a:hover{
+    background-color: gray;
+    transition: background-color 0.7s; 
+}
+
+.active{
+    background-color: gray;
+}
+
+
+main{
+    padding: 15px;
+    margin: 0 auto;
+}
+
+main p{
+    line-height: 2em;
+    text-align: justify;
+    font-size: 17px;
+}
+
+footer {
+    background-color: black;
+    color: white;                           
+    position: sticky;
+    padding: 5px;
+    top: 100%;
+    clear: both;
+}
+
+footer > p{
+    padding: 5px;
+}
+
+
+/*HISTORY*/
+
+#historyImageContainer{
+    width: 25%;
+    margin: 0 auto;
+}
+
+#historyImage{
+    width: 100%;
+
+}
+
+#history p::first-letter{
+    font-size: 200%;
+}
+
+
+#carSlideshow{
+    width: 45%;
+    height: 400px;
+    margin: 0 auto;
+    box-shadow: 0 10px 20px black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    animation-name: slideShowCars;              
+    animation-duration: 12s;                
+    animation-iteration-count: infinite;   
+    animation-direction:alternate;
+}
+
+@keyframes slideShowCars {            
+    0% { background-image: url('../images/historyImages/fabia.jpg'); }
+    33% { background-image: url('../images/historyImages/kamiq.jpg'); }
+    66% { background-image: url('../images/historyImages/scala.jpg'); }
+    100% { background-image: url('../images/historyImages/superb.jpg'); }
+}
+
+
+/*CARS*/
+
+#carContent{
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    animation: floating 1s linear 0s 1 normal forwards;
+}
+
+
+
+@keyframes floating{
+    from { left: -50%; }
+    to { left: 50%; transform: translate(-50%); }
+}
+
+.col1, .col2, .col3{
+    width: 33.33%;
+    float: left;
+    padding: 0px;
+
+    margin-bottom: 12px;
+}
+
+.col1 > h2, .col2 > h2, .col3 > h2{
+    text-align: center;
+}
+
+
+.col1 > p, .col2 > p, .col3 > p{
+    padding: 5px;
+    text-align: justify;
+}
+
+.colImg{
+    width: 95%;
+    margin: 0 auto;
+    border-radius: 20px;
+    transition: opacity .8s;
+    opacity: .6;
+}
+
+.colImg:hover{
+    opacity: 1;
+}
+
+.zoomImg:hover{
+    transform: scale(1.05);
+}
+
+
+
+
+/*CONTACT*/
+
+#formContainer{
+
+    border-radius: 25px;
+    background-color: black;
+    margin: 30px auto;
+    width: 700px;
+    padding: 15px;
+}
+
+form > select{
+    display: block;
+    margin: 10px auto;
+    padding: 15px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+form > fieldset > input{
+    display: block;
+    margin: 10px auto;
+    padding: 15px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.checkboxContainer > *{
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+input[type="submit"], input[type="reset"]{
+    width: 100%;
+    margin: 5% auto;
+    font-weight: bold;
+    font-size: 140%;
+}
+
+input[type="submit"]:hover, input[type="reset"]:hover{
+    background-color: grey;
+    color: white;
+    transition: background-color 0.7s;
+}
+
+
+/*CAR ADS*/
+
+.flexContainer{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 55%;  
+}
+
+.flexContainer > div{
+    width: 50%;
+    margin: 0;
+}
+
+a:active, a:hover, a:visited, a:link{
+    color: white;
+    
+}
+
+.flexContainer > div > img{
+    width: 100%;
+    padding: 2px;
+}
+
+
+table {
+    width: 50%;
+    border: 3px black solid;
+    border-collapse: collapse;
+    margin: 0 auto;
+    background-color: gray;
+}
+
+
+th {
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+
+th, td{
+    border: 3px solid black;      
+    vertical-align: middle;                 
+    padding: 7px;
+}
+
+
+td[headers="ammount"]{
+    text-align: center;
+}
+.carText{
+    width: 50%;
+    margin: 0 auto;
+
+}
+
+
+
+.adButtonContainer{
+    width: 25%;
+    margin: 25px auto;
+}
+
+.adButton{
+    width: 100%;
+    margin: 2px auto;
+    padding: 10px;
+    font-size: large;
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+}
+
+.adButton:hover{
+    background-color: grey;
+    color: white;
+    transition: all 0.3s;
+}
+
+
+.videoContainer{
+    width: 35%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.videoContainer > iframe{
+    width: 100%;
+}
+
+iframe{
+    width: 560px;
+    height: 315px;
+}
+
+/*PRINT PAGE*/
+
+@media print {
+    nav, #carSlideshow, h1, #historyImageContainer, hr {
+         display: none; 
+    }
+    
+    
+}
+
